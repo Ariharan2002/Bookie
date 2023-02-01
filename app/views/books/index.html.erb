@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>NAME<th>
+      <th>BOOK_ID<th>
+      <th>ADDRESS<th>
+      <th>PRICE_PAID<th>
+      <th>MAIL<th>
+      <th>PHONE<th>
+    </tr>
+  </thead>
+</table>
+
+</br>
+
+<div id="books">
+  <% @books.each do |book| %>
+    <%= render book %>
+    <p>
+      <%= link_to "Show this book", book %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New book", new_book_path %>
